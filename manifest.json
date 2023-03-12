@@ -3,7 +3,7 @@
   "name": "백준허브(BaekjoonHub)",
   "description": "Automatically integrate your BOJ submissions to GitHub",
   "homepage_url": "https://github.com/BaekjoonHub/BaekjoonHub",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "author": "flaxinger",
   "action": {
     "default_icon": "assets/thumbnail.png",
@@ -44,12 +44,14 @@
         "<all_urls>"
       ],
       "resources": [
+        "scripts/*",
+        "node_modules/*",
         "library/jquery-3.3.1.min.js",
         "library/semantic.min.js",
         "popup.html",
         "popup.js",
         "welcome.html",
-        "welcome.js"
+        "welcome.js"        
       ]
     }
   ],
@@ -59,7 +61,7 @@
         "https://github.com/*"
       ],
       "js": [
-        "scripts/util.js",
+        "scripts/utils/util.js",
         "scripts/Github.js",
         "scripts/authorize.js"
       ],
@@ -76,18 +78,7 @@
         "library/sha1.min.js",
         "library/jszip.min.js",
         "library/FileSaver.min.js",
-        "scripts/toast.js",
-        "scripts/util.js",
-        "scripts/Github.js",
-        "scripts/authorize.js",
-        "scripts/storage.js",
-        "scripts/enable.js",
-        "scripts/baekjoon/variables.js",
-        "scripts/baekjoon/storage.js",
-        "scripts/baekjoon/parsing.js",
-        "scripts/baekjoon/util.js",
-        "scripts/baekjoon/uploadfunctions.js",
-        "scripts/baekjoon/baekjoon.js"
+        "scripts/baekjoon/init.js"
       ],
       "run_at": "document_idle"
     },
@@ -100,7 +91,7 @@
       ],
       "js": [
         "library/sha1.min.js",
-        "scripts/util.js",
+        "scripts/utils/util.js",
         "scripts/Github.js",
         "scripts/authorize.js",
         "scripts/storage.js",
@@ -122,7 +113,7 @@
       ],
       "js": [
         "library/sha1.min.js",
-        "scripts/util.js",
+        "scripts/utils/util.js",
         "scripts/Github.js",
         "scripts/authorize.js",
         "scripts/storage.js",

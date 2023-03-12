@@ -1,4 +1,4 @@
-import {filter} from './../../scripts/util'
+import {filter} from '../../scripts/utils/util'
 
 test("filter sanity test", () => {
     let arr = [

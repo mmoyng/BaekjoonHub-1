@@ -1,7 +1,7 @@
 /* 백준 허브의 전역 변수 선언 파일입니다. */
 /* 포함된 변수는 다음과 같습니다. 
     languages: 백준의 언어 및 그에 맞는 file extension
-    bj_level: Solved.ac의 레벨별 매핑입니다. API 호출 시 0~31까지의 번호로 레벨이 표현되는데 이를 문자열로 매핑하였습니다.
+    
     CommitType: uploadGit에 사용되는 enum으로 readme 혹은 code를 업로드할 때 사용됩니다.
     titleRegex: 제목 형식의 regex 정의입니다.
     uploadState: 현재 업로드 중인지를 저장하는 boolean입니다.
@@ -118,63 +118,6 @@
     "Whitespace": "ws"
 }
 
-// // If a new language is added, perform the update manually using the script below.
-// // parsing all languages on https://help.acmicpc.net/language/info/all
-// [...document.querySelectorAll('div.card')]
-//   .map((x) => [x.querySelector('header > h3'), x.querySelector('ul > li:nth-child(2) > code')])
-//   .filter((x) => !!x[0] && !!x[1])
-//   .map((x) => x.map((el) => el.innerText))
-//   .map((x) => [x[0].trim(), x[1].match(/Main\.(?!exe)(?!jar)([a-zA-Z]+)/)])
-//   .filter((x) => !!x[0] && !!x[1])
-//   .sort((a, b) => a[0].localeCompare(b[0]))
-//   .forEach((x) => (languages[x[0]] = x[1][1]));
-// languages['Coq'] = 'v';
-// // sort languages by key
-// languages = Object.entries(languages)
-//   .sort((a, b) => a[0].localeCompare(b[0]))
-//   .reduce((acc, cur) => {
-//     acc[cur[0]] = cur[1];
-//     return acc;
-//   }, {});
-// // get length of languages
-// console.log("languages length: ", Object.keys(languages).length);
-// console.log("languages: ", languages);
-
-// BOJ Levels
-const bj_level = {
-  0: 'Unrated',
-  1: 'Bronze V',
-  2: 'Bronze IV',
-  3: 'Bronze III',
-  4: 'Bronze II',
-  5: 'Bronze I',
-  6: 'Silver V',
-  7: 'Silver IV',
-  8: 'Silver III',
-  9: 'Silver II',
-  10: 'Silver I',
-  11: 'Gold V',
-  12: 'Gold IV',
-  13: 'Gold III',
-  14: 'Gold II',
-  15: 'Gold I',
-  16: 'Platinum V',
-  17: 'Platinum IV',
-  18: 'Platinum III',
-  19: 'Platinum II',
-  20: 'Platinum I',
-  21: 'Diamond V',
-  22: 'Diamond IV',
-  23: 'Diamond III',
-  24: 'Diamond II',
-  25: 'Diamond I',
-  26: 'Ruby V',
-  27: 'Ruby IV',
-  28: 'Ruby III',
-  29: 'Ruby II',
-  30: 'Ruby I',
-  31: 'Master',
-};
 
 /* 채점 결과에 대한 각 구분 정보 */
 const RESULT_CATEGORY = {

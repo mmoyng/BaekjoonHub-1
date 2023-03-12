@@ -287,3 +287,5 @@ function _baekjoonSpaceRemoverFilter(path) {
 function _swexpertacademyRankRemoveFilter(path) {
   return path.replace(/\/D([0-8]+)\//g, '/');
 }
+
+export { updateStatsSHAfromPath, getStatsSHAfromPath, updateLocalStorageStats, getObjectFromLocalStorage}
